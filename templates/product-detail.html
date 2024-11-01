@@ -235,7 +235,7 @@
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
                                         <figure class="product-main-image">
-                                            <img id="product-zoom" src="assets/images/zelco/zelco products.jpeg" data-zoom-image="assets/images/products/single/centered/1-big.jpg" alt="product image">
+                                            <img id="product-zoom" src="{{product.image.url}}" data-zoom-image="assets/images/products/single/centered/1-big.jpg" alt="product image">
 
                                             <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                                 <i class="icon-arrows"></i>
@@ -265,7 +265,7 @@
 
                             <div class="col-md-6">
                                 <div class="product-details product-details-centered">
-                                    <h1 class="product-title">Zelco Tile Adhesive</h1><!-- End .product-title -->
+                                    <h1 class="product-title">{{product.name}}</h1><!-- End .product-title -->
 
                                     <div class="ratings-container">
                                         <div class="ratings">
@@ -275,11 +275,11 @@
                                     </div><!-- End .rating-container -->
 
                                     <div class="product-price">
-                                        Ksh. 2376.00
+                                        {{product.price}}
                                     </div><!-- End .product-price -->
 
                                     <div class="product-content">
-                                        <p>Tile adhesive is a specially formulated high strength cement-based polymer with improved workability, increased bond strength and extended coverage.</p>
+                                        <p>{{product.description}}</p>
                                     </div><!-- End .product-content -->
 
                                     <div class="details-filter-row details-row-size">
@@ -401,11 +401,12 @@
 
                     <div class="row">
                         <div class="col-6 col-md-4 col-lg-3">
+                            {% for product in products%}
                             <div class="product product-3">
                                 <figure class="product-media">
                                     <span class="product-label">Sale</span>
                                     <a href="product.html">
-                                        <img src="assets/images/products/elements/product-1.jpg" alt="Product image" class="product-image">
+                                        <img src={{product.image.url}} alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -420,11 +421,11 @@
                                         <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
                                     </div><!-- End .product-action -->
                                     <div class="product-cat">
-                                        <a href="#">Women</a>
+                                        <a href="#">{{product.catery}}</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Aliquam tincidunt mauris</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product.html">{{product.name}}</a></h3><!-- End .product-title -->
                                     <div class="product-price">
-                                        <span class="new-price">$50.00</span>
+                                        <span class="new-price">${{product.price}}</span>
                                         <span class="old-price">$84.00</span>
                                     </div><!-- End .product-price -->
                                 </div><!-- End .product-body -->
@@ -451,132 +452,10 @@
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-footer -->
                             </div><!-- End .product -->
+                            {% endfor %}
                         </div><!-- End .col-sm-6 col-lg-3 -->
 
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-3">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img src="assets/images/products/elements/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
 
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-                                        <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-                                    </div><!-- End .product-action -->
-                                    <div class="product-cat">
-                                        <a href="#">Men</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Vestibulum auctor</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $120.00
-                                    </div><!-- End .product-price -->
-                                </div><!-- End .product-body -->
-
-                                <div class="product-footer">
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-footer -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-3">
-                                <figure class="product-media">
-                                    <span class="product-label">New</span>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/elements/product-3.jpg" alt="Product image" class="product-image">
-                                        <img src="assets/images/products/elements/product-3-2.jpg" alt="Product image" class="product-image-hover">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-                                        <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-                                    </div><!-- End .product-action -->
-                                    <div class="product-cat">
-                                        <a href="#">Women</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Nunc dignissim risus</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $50.00
-                                    </div><!-- End .product-price -->
-                                </div><!-- End .product-body -->
-
-                                <div class="product-footer">
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 0 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-
-                                    <div class="product-nav product-nav-thumbs">
-                                        <a href="#" class="active">
-                                            <img src="assets/images/products/elements/product-thumb-4.jpg" alt="product desc">
-                                        </a>
-                                        <a href="#">
-                                            <img src="assets/images/products/elements/product-thumb-5.jpg" alt="product desc">
-                                        </a>
-                                    </div><!-- End .product-nav -->
-                                </div><!-- End .product-footer -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-3">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img src="assets/images/products/elements/product-4.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                        <a href="#" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-                                        <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-                                    </div><!-- End .product-action -->
-                                    <div class="product-cat">
-                                        <a href="#">Accessories</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Cras ornare tristique</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        <span class="out-price">$32.00</span>
-                                    </div><!-- End .product-price -->
-                                </div><!-- End .product-body -->
-
-                                <div class="product-footer">
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 11 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-footer -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-lg-3 -->
                     </div><!-- End .row -->
 
         <footer class="footer">
