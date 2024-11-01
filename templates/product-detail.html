@@ -235,7 +235,7 @@
                                 <div class="product-gallery product-gallery-vertical">
                                     <div class="row">
                                         <figure class="product-main-image">
-                                            <img id="product-zoom" src="{{product.image.url}}" data-zoom-image="assets/images/products/single/centered/1-big.jpg" alt="product image">
+                                            <img id="product-zoom" src="{{ product.image.url }}" data-zoom-image="assets/images/products/single/centered/1-big.jpg" alt="product image">
 
                                             <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                                 <i class="icon-arrows"></i>
@@ -244,19 +244,19 @@
 
                                         <div id="product-zoom-gallery" class="product-image-gallery">
                                             <a class="product-gallery-item active" href="#" data-image="assets/images/zelco/zelco products.jpeg" data-zoom-image="assets/images/assets/images/zelco/zelco products.jpeg">
-                                                <img src="assets/images/zelco/zelco products.jpeg" alt="product side">
+                                                <img src="{{ product.image.url }}" alt="product side">
                                             </a>
 
                                             <a class="product-gallery-item" href="#" data-image="assets/images/products/single/centered/2.jpg" data-zoom-image="assets/images/products/single/centered/2-big.jpg">
-                                                <img src="assets/images/zelco/zelco products.jpeg" alt="product cross">
+                                                <img src="{{ product.image.url }}" alt="product cross">
                                             </a>
 
                                             <a class="product-gallery-item" href="#" data-image="assets/images/products/zelco/zelco products.jpeg" data-zoom-image="assets/images/zelco/zelco products.jpeg">
-                                                <img src="assets/images/zelco/zelco products.jpeg" alt="product with model">
+                                                <img src="{{ product.image.url }}" alt="product with model">
                                             </a>
 
                                             <a class="product-gallery-item" href="#" data-image="assets/images/zelco/zelco products.jpeg" data-zoom-image="assets/images/zelco/zelco products.jpeg">
-                                                <img src="assets/images/zelco/zelco products.jpeg" alt="product back">
+                                                <img src="{{ product.image.url }}" alt="product back">
                                             </a>
                                         </div><!-- End .product-image-gallery -->
                                     </div><!-- End .row -->
@@ -400,8 +400,9 @@
                     <h2 class="title text-center mb-3">Other Products</h2><!-- End .title -->
 
                     <div class="row">
+                        {% for product in products%}
                         <div class="col-6 col-md-4 col-lg-3">
-                            {% for product in products%}
+
                             <div class="product product-3">
                                 <figure class="product-media">
                                     <span class="product-label">Sale</span>
@@ -452,10 +453,10 @@
                                     </div><!-- End .product-nav -->
                                 </div><!-- End .product-footer -->
                             </div><!-- End .product -->
-                            {% endfor %}
+
                         </div><!-- End .col-sm-6 col-lg-3 -->
 
-
+                        {% endfor %}
                     </div><!-- End .row -->
 
         <footer class="footer">
@@ -809,18 +810,18 @@
     </div><!-- End .modal -->
 
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
-    <script src="assets/js/jquery.elevateZoom.min.js"></script>
-    <script src="assets/js/bootstrap-input-spinner.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.hoverIntent.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/superfish.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap-input-spinner.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.elevateZoom.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap-input-spinner.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
     <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 
 
