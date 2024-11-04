@@ -3,8 +3,18 @@ from .models import Product, Category
 # Create your views here.
 
 def index(request):
-    return render(request, "product-detail.html")
+    products = Product.objects.all()
+    context = {
+        "products":products
+    }
+    return render(request, "index-1.html", context)
 
+def shop(request):
+    products = Product.objects.all()
+    context = {
+        "products":products
+    }
+    return render(request, "products.html", context)
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug=slug)
     products = category.products.all()
