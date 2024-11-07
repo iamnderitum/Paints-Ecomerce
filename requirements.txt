@@ -4,5 +4,6 @@ Django==5.0.7
 Pillow
 
 psycopg2-binary==2.9.10
-
-whitenoise[brotli]
+psycopg2
+gunicorn
+whitenoise
