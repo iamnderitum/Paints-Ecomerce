@@ -32,6 +32,8 @@ ALLOWED_HOSTS = [
     "localhost",
     '127.0.0.1',
     "3600-197-232-32-250.ngrok-free.app",
+
+    "zelco-industry.onrender.com",
     ]
 
 CSRF_TRUSTED_ORIGINS = [
