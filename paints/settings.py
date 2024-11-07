@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_(r!n#b&1y9-6ujsx==p2!5xr*3l=wv3!s!0=*-!k&(%844(f0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+# DEBUG = True
+DEBUG = os.environ.get("DEBUG", "True") == "True"
 ALLOWED_HOSTS = [
     "77a9-197-232-32-250.ngrok-free.app",
     "localhost",
@@ -102,16 +102,20 @@ WSGI_APPLICATION = 'paints.wsgi.application'
 #         conn_max_age=600
 #     )
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'paints',
-        'USER': 'paint',
-        'PASSWORD': '011235813',
-        'HOST': 'localhost',
-        'PORT': '5432',
+if not DEBUG:
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'paints',
+            'USER': 'paint',
+            'PASSWORD': '011235813',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
     }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
