@@ -27,3 +27,6 @@ def product_detail(request, slug):
 
 def error_404(request):
     return render (request, "404.html")
+
+def contact(request):
+    return render(request, "contact.html")

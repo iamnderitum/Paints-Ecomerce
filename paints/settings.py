@@ -35,11 +35,13 @@ ALLOWED_HOSTS = [
 
     "zelco_industry.onrender.com",
     "paints-industry.onrender.com",
+    "6dd2-197-232-32-250.ngrok-free.app",
     ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://77a9-197-232-32-250.ngrok-free.app',
-    "https://3600-197-232-32-250.ngrok-free.app", # add your full ngrok URL with https
+    "https://3600-197-232-32-250.ngrok-free.app",
+     "https://6dd2-197-232-32-250.ngrok-free.app" # add your full ngrok URL with https
 ]
 # Application definition
 

@@ -173,7 +173,7 @@
                             <div class="product product-3">
                                 <figure class="product-media">
                                     <span class="product-label">Sale</span>
-                                    <a href="product.html">
+                                    <a href="{% url 'product_detail' slug=product.slug %}">
                                         <img src={{product.image.url}} alt="Product image" class="product-image">
                                     </a>
 
@@ -186,12 +186,12 @@
 
                                 <div class="product-body">
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart"><span>Read More</span></a>
+                                        <a href="{% url 'product_detail' slug=product.slug %}" class="btn-product btn-cart"><span>Read More</span></a>
                                     </div><!-- End .product-action -->
                                     <div class="product-cat">
                                         <a href="#">{{product.catery}}</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">{{product.name}}</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="{% url 'product_detail' slug=product.slug %}">{{product.name}}</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         <span class="new-price">Ksh{{product.price}}</span>
                                         <span class="old-price">Ksh. 984.00</span>

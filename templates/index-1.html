@@ -42,7 +42,7 @@
             <div class="header-top">
                 <div class="container">
                     <div class="header-left">
-                        <p>Special collection already available.</p><a href="#">&nbsp;Read more ...</a>
+                        <p>Zelco, One stop Store for all Paints.</p><a href="#">&nbsp;Read more ...</a>
                     </div><!-- End .header-left -->
 
                     <div class="header-right">
@@ -102,7 +102,7 @@
 
                         </div><!-- End .compare-dropdown -->
 
-                  
+
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->
@@ -243,13 +243,13 @@
                                             </a>
 
                                             <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>View More</span></a>
+                                                <a href="{% url 'shop'%}" class="btn-product-icon btn-wishlist "><span>View More</span></a>
                                             </div><!-- End .product-action-vertical -->
                                         </figure><!-- End .product-media -->
 
                                         <div class="product-body">
                                             <div class="product-cat">
-                                                <a href="#">Decor</a>
+                                                <a href="{% url 'shop'%}">{{product.category.name}}</a>
                                             </div><!-- End .product-cat -->
                                             <h3 class="product-title"><a href="product.html">{{product.name}}</a></h3><!-- End .product-title -->
                                             <div class="product-price">
@@ -631,7 +631,7 @@
 	            		<div class="col-sm-12 col-lg-6">
 	            			<div class="widget widget-about">
 	            				<img src="assets/images/demos/demo-2/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
-	            				<p>Zelco Industries. </p>
+	            				<p>Inspiration is for amateurs. The rest of us just show up and get the work done.  </p>
 
 
 	            			</div><!-- End .widget about-widget -->
@@ -642,11 +642,11 @@
 	            				<h4 class="widget-title">Information</h4><!-- End .widget-title -->
 
 	            				<ul class="widget-list">
-	            					<li><a href="about.html">About zelco</a></li>
-	            					<li><a href="#">How to shop on Zelco</a></li>
-	            					<li><a href="#">FAQ</a></li>
-	            					<li><a href="contact.html">Contact us</a></li>
-	            					<li><a href="login.html">Log in</a></li>
+	            					<li><a href="{% url 'error-404' %}">About zelco</a></li>
+
+	            					<li><a href="{% url 'error-404' %}">FAQ</a></li>
+	            					<li><a href="{% url 'contact' %}">Contact us</a></li>
+	            					<li><a href="{% url 'error-404' %}">Log in</a></li>
 	            				</ul><!-- End .widget-list -->
 	            			</div><!-- End .widget -->
 	            		</div><!-- End .col-sm-4 col-lg-3 -->
@@ -670,9 +670,9 @@
 
 	            				<ul class="widget-list">
 	            					<li><a href="#">Sign In</a></li>
-	            					<li><a href="cart.html">View Cart</a></li>
-	            					<li><a href="#">My Wishlist</a></li>
-	            					<li><a href="#">Track My Order</a></li>
+
+
+
 	            					<li><a href="#">Help</a></li>
 	            				</ul><!-- End .widget-list -->
 	            			</div><!-- End .widget -->

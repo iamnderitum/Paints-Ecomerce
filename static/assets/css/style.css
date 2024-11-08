@@ -5208,6 +5208,7 @@ p {
   margin-bottom: 2.4rem;
 }
 .title-separator {
+  margin-left: 20px;
   font-weight: 300;
   color: #cccccc;
 }
