@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_(r!n#b&1y9-6ujsx==p2!5xr*3l=wv3!s!0=*-!k&(%844(f0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = os.environ.get("DEBUG", "True") == "True"
+DEBUG = True
+#DEBUG = os.environ.get("DEBUG", "True") == "True"
 ALLOWED_HOSTS = [
     "77a9-197-232-32-250.ngrok-free.app",
     "localhost",
@@ -107,7 +107,7 @@ DATABASES = {
 
 # Render PostgreSQL configuration for production
 if not DEBUG:
-    DATABASES["default"] = dj_database_url.config(default=os.getenv("DATABASE_URL"))
+    DATABASES["default"] = dj_database_url.config(default="postgresql://paint:4t5IUWLuiszDIeiOSqcf9vAmzGRYmWEF@dpg-csmksd5umphs73ak16u0-a/paints_kni0")
 
 else:
     DATABASES = {
