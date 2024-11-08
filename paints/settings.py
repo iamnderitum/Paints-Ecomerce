@@ -80,6 +80,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                "products.context_processors.category_and_capacity_links"
             ],
         },
     },
@@ -87,9 +89,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'paints.wsgi.application'
 
-DATABASES = {
-    'default': dj_database_url.config(default="postgresql://paint:4t5IUWLuiszDIeiOSqcf9vAmzGRYmWEF@dpg-csmksd5umphs73ak16u0-a/paints_kni0")
-}
+# DATABASES = {
+#     'default': dj_database_url.config(default="postgresql://paint:4t5IUWLuiszDIeiOSqcf9vAmzGRYmWEF@dpg-csmksd5umphs73ak16u0-a/paints_kni0")
+# }
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -113,16 +115,16 @@ DATABASES = {
 #     DATABASES["default"] = dj_database_url.config(default="postgresql://paint:4t5IUWLuiszDIeiOSqcf9vAmzGRYmWEF@dpg-csmksd5umphs73ak16u0-a/paints_kni0")
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'paints',
-#         'USER': 'paint',
-#         'PASSWORD': '011235813',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'paints',
+        'USER': 'paint',
+        'PASSWORD': '011235813',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
