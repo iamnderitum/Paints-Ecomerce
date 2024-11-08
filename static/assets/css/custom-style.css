@@ -1,0 +1,98 @@
+/* Full-width, sticky navbar with custom styling */
+.custom-navbar {
+    background-color: #acd0ec;
+    color: #FF5733 ;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo / Brand style aligned to the left */
+.custom-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #36ff33  !important;
+    text-transform: uppercase;
+    margin-right: 1rem;
+}
+
+/* Toggler button for mobile view */
+.custom-toggler {
+    border: none;
+    color: #ecb0ac;
+}
+
+/* Navbar links style */
+.custom-link {
+    font-size: 1.2rem;
+    color: #f8f9fa !important;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+.custom-link:hover {
+    color: #adb5bd !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .custom-navbar {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .custom-brand {
+        font-size: 1.6rem;
+    }
+
+    .custom-link {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .custom-brand {
+        font-size: 1.4rem;
+    }
+
+    .custom-link {
+        font-size: 1rem;
+    }
+}
+
+/* Custom style for the navbar toggler */
+.custom-toggler .navbar-toggler-icon {
+    background-image: none; /* Remove default icon */
+    background-color: #ecb0ac; /* Set custom color */
+    width: 30px; /* Adjust width as needed */
+    height: 3px; /* Adjust thickness of each bar */
+    display: block;
+    position: relative;
+}
+
+.custom-toggler .navbar-toggler-icon::before,
+.custom-toggler .navbar-toggler-icon::after {
+    content: '';
+    background-color: #ecb0ac;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+/* Top bar of the toggler */
+.custom-toggler .navbar-toggler-icon::before {
+    top: -8px;
+}
+
+/* Bottom bar of the toggler */
+.custom-toggler .navbar-toggler-icon::after {
+    top: 8px;
+}
