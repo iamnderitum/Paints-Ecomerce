@@ -96,3 +96,58 @@
 .custom-toggler .navbar-toggler-icon::after {
     top: 8px;
 }
+
+.intro-slider-container {
+    position: relative;
+}
+
+.intro-slide {
+    background-size: cover;           /* Image covers the whole slide */
+    background-position: center;      /* Center the image */
+    height: 500px;                    /* Set the height for your slider */
+    display: flex;
+    align-items: center;              /* Center content vertically */
+    justify-content: center;          /* Center content horizontally */
+}
+
+.slider-loader {
+    display: none;                    /* Hide loader after page load */
+}
+
+
+.intro-slide {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: 500px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;               /* To allow positioning of pseudo-element */
+}
+
+.intro-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional color overlay */
+    opacity: 0.6;                     /* Background image opacity */
+    z-index: 1;
+}
+
+.intro-slide .container {
+    position: relative;
+    z-index: 2;                       /* Ensures content appears above overlay */
+}
+
+.intro-content h3,
+.intro-content h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+}

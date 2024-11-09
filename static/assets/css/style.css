@@ -6220,10 +6220,10 @@ p {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
 }
 .btn-outline-white {
-  color: #fff;
+  color: #83ff33;
   background-color: transparent;
   background-image: none;
-  border-color: #fff;
+  border-color: #83ff33;
   box-shadow: none;
 }
 .btn-outline-white:hover,
@@ -6289,10 +6289,10 @@ p {
   background-color: transparent;
 }
 .btn-outline-white-4 {
-  color: #fff;
+  color: #83ff33 !important;
   background-color: transparent;
   background-image: none;
-  border-color: #fff;
+  border-color: #83ff33 !important;
   box-shadow: none;
 }
 .btn-outline-white-4:hover,
@@ -6302,13 +6302,13 @@ p {
 .btn-outline-white-4:not(:disabled):not(.disabled).active,
 .show > .btn-outline-white-4.dropdown-toggle {
   color: #c96;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #83ff33;
+  border-color: #83ff33;
   box-shadow: none;
 }
 .btn-outline-white-4.disabled,
 .btn-outline-white-4:disabled {
-  color: #fff;
+  color: #83ff33;
   background-color: transparent;
 }
 .bg-image .btn-wrap > span {
@@ -9369,7 +9369,34 @@ small.form-text {
 }
 .intro-slider-container,
 .intro-slide {
-  background-color: #cccccc;
+  background-color: #b08b88;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.intro-slide .container{
+  position: relative;
+  z-index: 2;
+}
+
+.intro-slide::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100;
+  height: 100;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  opacity: 0.6;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .intro-slider-container,
 .intro-slide .slide-image {
@@ -9455,14 +9482,14 @@ button:focus {
   padding: 0.65rem 1rem;
 }
 .intro-subtitle {
-  color: #83ff33;
+  color: #83ff33 !important;
   font-weight: 300;
   font-size: 1.4rem;
   letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
 }
 .intro-title {
-  color: #83ff33;
+  color: #83ff33 !important;
   font-weight: 700;
   font-size: 3rem;
   line-height: 1.2;

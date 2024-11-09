@@ -38,6 +38,14 @@
     <link rel="stylesheet" href="{% static 'assets/css/demos/demo-6.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </head>
 
 <body>
@@ -97,40 +105,25 @@
             </div>
 
             <div class="intro-slider-container">
-                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" data-owl-options='{
-                        "dots": false,
-                        "nav": false,
-                        "responsive": {
-                            "992": {
-                                "nav": true
-                            }
-                        }
-                    }'>
+                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light">
                     <div class="intro-slide" style="background-image: url({% static 'assets/images/zelco/home.jpg' %});">
                         <div class="container intro-content text-center">
-                            <h3 class="intro-subtitle text-white">We get it Done</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title text-white">Zelco Industry Paints</h1><!-- End .intro-title -->
-
-                            <a href="category.html" class="btn btn-outline-white-4">
-                                <span>Discover More</span>
-                            </a>
-                        </div><!-- End .intro-content -->
-                    </div><!-- End .intro-slide -->
-
+                            <h3 class="intro-subtitle text-white">We get it Done</h3>
+                            <h1 class="intro-title text-white">Zelco Industry Paints</h1>
+                            <a href="category.html" class="btn btn-outline-white-4"><span>Discover More</span></a>
+                        </div>
+                    </div>
                     <div class="intro-slide" style="background-image: url({% static 'assets/images/zelco/home.jpg' %});">
                         <div class="container intro-content text-center">
-                            <h3 class="intro-subtitle text-white">Don’t Miss</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title text-white">Mysrety Deals</h1><!-- End .intro-title -->
+                            <h3 class="intro-subtitle text-white">We get it Done</h3>
+                            <h1 class="intro-title text-white">Zelco Industry Paints</h1>
+                            <a href="category.html" class="btn btn-outline-white-4"><span>Discover More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <span class="slider-loader"></span>
+            </div>
 
-                            <a href="category.html" class="btn btn-outline-white-4">
-                                <span>Discover More</span>
-                            </a>
-                        </div><!-- End .intro-content -->
-                    </div><!-- End .intro-slide -->
-                </div><!-- End .intro-slider owl-carousel owl-theme -->
-
-                <span class="slider-loader"></span><!-- End .slider-loader -->
-            </div><!-- End .intro-slider-container -->
         </header><!-- End .header -->
 
         <main class="main">
@@ -922,6 +915,33 @@
     <script src="{% static 'assets/js/custom-js.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
     <script src="{% static 'assets/js/demos/demo-6.js' %}"></script>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery and Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $(".intro-slider").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            dots: true,
+            nav: true,
+            navText: ["<", ">"],
+            responsive: {
+                0: { nav: false },
+                992: { nav: true }
+            }
+        });
+    });
+    </script>
 </body>
 
 
