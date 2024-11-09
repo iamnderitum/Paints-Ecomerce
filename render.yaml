@@ -9,7 +9,7 @@ services:
     plan: free
     name: zelco
     runtime: python
-    buildCommand: "./build.sh"
+    buildCommand: "./build.sh && pip install -r requirements.txt && python manage.py collectstatic --noinput"
     startCommand: "python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: DATABASE_URL
