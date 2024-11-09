@@ -221,10 +221,10 @@ blockquote cite span {
   font-size: 1.4rem;
 }
 blockquote.text-white cite {
-  color: #cccccc;
+  color: #83ff33;
 }
 blockquote.text-white cite span {
-  color: #777;
+  color: #83ff33;
 }
 @media screen and (min-width: 768px) {
   h1,
@@ -7827,7 +7827,7 @@ p {
   text-decoration: none;
 }
 .banner-title.text-white a {
-  color: #fff;
+  color: #83ff33;
 }
 .banner-subtitle {
   color: #777;
@@ -7845,7 +7845,7 @@ p {
   text-decoration: none;
 }
 .banner-subtitle.text-white a {
-  color: #fff;
+  color: #83ff33;
 }
 .banner-link {
   font-weight: 400;
@@ -9455,14 +9455,14 @@ button:focus {
   padding: 0.65rem 1rem;
 }
 .intro-subtitle {
-  color: #000;
+  color: #83ff33;
   font-weight: 300;
   font-size: 1.4rem;
   letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
 }
 .intro-title {
-  color: #000;
+  color: #83ff33;
   font-weight: 700;
   font-size: 3rem;
   line-height: 1.2;
