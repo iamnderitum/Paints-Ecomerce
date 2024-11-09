@@ -32,8 +32,12 @@
     <link rel="stylesheet" href="{% static 'assets/css/plugins/jquery.countdown.css' %}">
     <!-- Main CSS File -->
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/skins/skin-demo-2.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/demos/demo-2.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom-style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/skins/skin-demo-6.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/demos/demo-6.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -41,166 +45,98 @@
         <header class="header header-2 header-intro-clearance">
             <div class="header-top">
                 <div class="container">
-                    <div class="header-left">
-                        <p>Zelco, One stop Store for all Paints.</p><a href="#">&nbsp;Read more ...</a>
-                    </div><!-- End .header-left -->
+                    <div class="header-dropdown">
+
+                        <a href="#"><i class="fa fa-address-book" style="font-size:12 px;color:blue; font-style: initial;">  +254 717 553 921</i></a>
+
+                    </div>
+
+                    <div class="header-dropdown">
+                        <a href="#"><i class="fa fa-envelope-o" style="font-size:12px">  graphmaster@zelco.com</i></a>
+
+                    </div>
 
                     <div class="header-right">
-
                         <ul class="top-menu">
                             <li>
                                 <a href="#">Links</a>
                                 <ul>
 
+                                    <li><a href=""><i class="icon-facebook" style="font-size:24px"></i> </a></li>
 
-                                    <li><a href="#signin-modal" data-toggle="modal">+254 717 553 921</a></li>
+
+                                    <li><a href="" data-toggle="modal"><i class="icon-instagram" style="font-size:24px"></i></a></li>
                                 </ul>
                             </li>
-                        </ul><!-- End .top-menu -->
-                    </div><!-- End .header-right -->
-
+                        </ul>
+                    </div>
                 </div><!-- End .container -->
             </div><!-- End .header-top -->
 
-            <div class="header-middle">
-                <div class="container">
-                    <div class="header-left">
-                        <button class="mobile-menu-toggler">
-                            <span class="sr-only">Toggle mobile menu</span>
-                            <i class="icon-bars"></i>
-                        </button>
-
-                        <a href="index.html" class="logo">
-                            <h2 class="title">Zelco Industries <span class="title-separator"></span> </h2>
-                        </a>
-                    </div><!-- End .header-left -->
-
-                    <div class="header-center">
-                        <div class="header-search header-search-extended header-search-visible header-search-no-radius d-none d-lg-block">
-                            <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
-                            <form action="#" method="get">
-                                <div class="header-search-wrapper search-wrapper-wide">
-                                    <label for="q" class="sr-only">Search</label>
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." required>
-                                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-                                </div><!-- End .header-search-wrapper -->
-                            </form>
-                        </div><!-- End .header-search -->
+            <div class="header-middle sticky-header">
+                <nav class="navbar navbar-expand-lg custom-navbar">
+                    <a class="navbar-brand custom-brand" href="#">Zelco Industries</a>
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link custom-link" href="{% url 'shop'%}">Products<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link custom-link" href="#">Product Catalogue</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link custom-link" href="{% url 'contact' %}">Contact Us</a>
+                            </li>
+                        </ul>
                     </div>
+                </nav>
 
-                    <div class="header-right">
-                        <div class="account">
-                            <a href="{% url 'error-404' %}" title="My account">
-                                <div class="icon">
-                                    <i class="icon-user"></i>
-                                </div>
-                                <p>Account</p>
+            </div>
+
+            <div class="intro-slider-container">
+                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" data-owl-options='{
+                        "dots": false,
+                        "nav": false,
+                        "responsive": {
+                            "992": {
+                                "nav": true
+                            }
+                        }
+                    }'>
+                    <div class="intro-slide" style="background-image: url(assets/images/demos/demo-6/slider/slide-1.jpg);">
+                        <div class="container intro-content text-center">
+                            <h3 class="intro-subtitle text-white">We get it Done</h3><!-- End .h3 intro-subtitle -->
+                            <h1 class="intro-title text-white">Zelco Industry Paints</h1><!-- End .intro-title -->
+
+                            <a href="category.html" class="btn btn-outline-white-4">
+                                <span>Discover More</span>
                             </a>
-                        </div><!-- End .compare-dropdown -->
+                        </div><!-- End .intro-content -->
+                    </div><!-- End .intro-slide -->
 
-                        <div class="wishlist">
+                    <div class="intro-slide" style="background-image: url({% static 'assets/images/zelco/home.jpg'git status
+                     %});">
+                        <div class="container intro-content text-center">
+                            <h3 class="intro-subtitle text-white">Don’t Miss</h3><!-- End .h3 intro-subtitle -->
+                            <h1 class="intro-title text-white">Mysrety Deals</h1><!-- End .intro-title -->
 
-                        </div><!-- End .compare-dropdown -->
-
-
-                    </div><!-- End .header-right -->
-                </div><!-- End .container -->
-            </div><!-- End .header-middle -->
-
-            <div class="header-bottom sticky-header">
-                <div class="container">
-                    <div class="header-left">
-                        <div class="dropdown category-dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
-                                Browse Categories
+                            <a href="category.html" class="btn btn-outline-white-4">
+                                <span>Discover More</span>
                             </a>
+                        </div><!-- End .intro-content -->
+                    </div><!-- End .intro-slide -->
+                </div><!-- End .intro-slider owl-carousel owl-theme -->
 
-                            <div class="dropdown-menu">
-                                <nav class="side-nav">
-                                    <ul class="menu-vertical sf-arrows">
-                                        <li class="item-lead"><a href="#">Daily offers</a></li>
-                                        <li class="item-lead"><a href="#">Gift Ideas</a></li>
-                                        <li><a href="#">paints</a></li>
-                                        <li><a href="#">wall filler</a></li>
-                                        <li><a href="#">Adhesives</a></li>
-
-                                    </ul><!-- End .menu-vertical -->
-                                </nav><!-- End .side-nav -->
-                            </div><!-- End .dropdown-menu -->
-                        </div><!-- End .category-dropdown -->
-                    </div><!-- End .header-left -->
-
-
-
-                    <div class="header-right">
-                        <i class="la la-lightbulb-o"></i><p>Clearance<span class="highlight">&nbsp;Up to 30% Off</span></p>
-                    </div>
-                </div><!-- End .container -->
-            </div><!-- End .header-bottom -->
+                <span class="slider-loader"></span><!-- End .slider-loader -->
+            </div><!-- End .intro-slider-container -->
         </header><!-- End .header -->
 
         <main class="main">
-            <div class="intro-slider-container">
-                <div class="owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl" data-owl-options='{"nav": false}'>
-                    <div class="intro-slide" style="background-image: url('{% static "assets/images/zelco/home.jpg" %}');">
-                        <div class="container intro-content">
-                            <h3 class="intro-subtitle">Zelco Industries</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title">Find Paints <br>That Suits You.</h1><!-- End .intro-title -->
-
-                            <a href="category.html" class="btn btn-primary">
-                                <span>Shop Now</span>
-                                <i class="icon-long-arrow-right"></i>
-                            </a>
-                        </div><!-- End .container intro-content -->
-                    </div><!-- End .intro-slide -->
 
 
-
-                    <div class="intro-slide" style="background-image: url('{% static "assets/images/zelco/home.jpg" %}');">
-                        <div class="container intro-content">
-                            <h3 class="intro-subtitle">Find Paints</h3><!-- End .h3 intro-subtitle -->
-                            <h1 class="intro-title">
-                                That Suits You. <br>Work For You.<br>
-                                <span class="text-primary">
-                                    <sup class="text-white font-weight-light">from</sup><sup>Ksh.</sup>999
-                                </span>
-                            </h1><!-- End .intro-title -->
-
-                            <a href="{% url 'shop'%}" class="btn btn-primary btn-black">
-                                <span>Shop Now</span>
-                                <i class="icon-long-arrow-right"></i>
-                            </a>
-                        </div><!-- End .container intro-content -->
-                    </div><!-- End .intro-slide -->
-                </div><!-- End .owl-carousel owl-simple -->
-
-                <span class="slider-loader text-white"></span><!-- End .slider-loader -->
-            </div><!-- End .intro-slider-container -->
-
-
-            <div class="mb-3 mb-lg-5"></div><!-- End .mb-3 mb-lg-5 -->
-
-            <div class="banner-group">
-                <div class="container">
-
-                </div><!-- End .container -->
-            </div><!-- End .banner-group -->
-
-            <div class="mb-3"></div><!-- End .mb-6 -->
-
-            <div class="container">
-                <!-- <ul class="nav nav-pills nav-border-anim nav-big justify-content-center mb-3" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="products-featured-link" data-toggle="tab" href="#products-featured-tab" role="tab" aria-controls="products-featured-tab" aria-selected="true">Featured</a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" id="products-sale-link" data-toggle="tab" href="#products-sale-tab" role="tab" aria-controls="products-sale-tab" aria-selected="false">On Sale</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="products-top-link" data-toggle="tab" href="#products-top-tab" role="tab" aria-controls="products-top-tab" aria-selected="false">Top Rated</a>
-                    </li>
-                </ul> -->
-            </div><!-- End .container -->
 
 
             <div class="mb-5"></div><!-- End .mb-5 -->
@@ -984,8 +920,9 @@
     <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
     <!-- Main JS File -->
+    <script src="{% static 'assets/js/custom-js.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
-    <script src="{% static 'assets/js/demos/demo-2.js' %}"></script>
+    <script src="{% static 'assets/js/demos/demo-6.js' %}"></script>
 </body>
 
 
