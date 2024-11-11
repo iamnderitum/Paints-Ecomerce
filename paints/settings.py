@@ -28,14 +28,11 @@ SECRET_KEY = 'django-insecure-_(r!n#b&1y9-6ujsx==p2!5xr*3l=wv3!s!0=*-!k&(%844(f0
 DEBUG = True
 #DEBUG = os.environ.get("DEBUG", "True") == "True"
 ALLOWED_HOSTS = [
-    "77a9-197-232-32-250.ngrok-free.app",
     "localhost",
     '127.0.0.1',
-    "3600-197-232-32-250.ngrok-free.app",
 
     "zelco_industry.onrender.com",
     "paints-industry.onrender.com",
-    "6dd2-197-232-32-250.ngrok-free.app",
     ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -160,7 +157,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
@@ -179,4 +176,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
