@@ -50,18 +50,20 @@
 
 <body>
     <div class="page-wrapper">
-        <header class="header header-2 header-intro-clearance">
+        <header class="header">
             <div class="header-top">
                 <div class="container">
-                    <div class="header-dropdown">
+                    <div class="header-left">
+                        <div class="header-dropdown">
 
-                        <a href="#"><i class="fa fa-address-book" style="font-size:12 px;color:blue; font-style: initial;">  +254 717 553 921</i></a>
+                            <a href="{% url 'error-404' %}"><i class="fa fa-address-book" style="font-size:12 px;color:blue; font-style: initial;">  +254 717 553 921</i></a>
 
-                    </div>
+                        </div>
 
-                    <div class="header-dropdown">
-                        <a href="#"><i class="fa fa-envelope-o" style="font-size:12px">  graphmaster@zelco.com</i></a>
+                        <div class="header-dropdown">
+                            <a href="{% url 'error-404' %}"><i class="fa fa-envelope-o" style="font-size:12px">  graphmaster@zelco.com</i></a>
 
+                        </div>
                     </div>
 
                     <div class="header-right">
@@ -70,20 +72,20 @@
                                 <a href="#">Links</a>
                                 <ul>
 
-                                    <li><a href=""><i class="icon-facebook" style="font-size:24px"></i> </a></li>
+                                    <li><a href="{% url 'error-404' %}"><i class="icon-facebook" style="font-size:24px"></i> </a></li>
 
 
-                                    <li><a href="" data-toggle="modal"><i class="icon-instagram" style="font-size:24px"></i></a></li>
+                                    <li><a href="{% url 'error-404' %}" data-toggle="modal"><i class="icon-instagram" style="font-size:24px"></i></a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                </div><!-- End .container -->
+                </div>
             </div><!-- End .header-top -->
 
             <div class="header-middle sticky-header">
                 <nav class="navbar navbar-expand-lg custom-navbar">
-                    <a class="navbar-brand custom-brand" href="#">Zelco Industries</a>
+                    <a class="navbar-brand custom-brand" href="{% url 'index' %}">Zelco Industries</a>
                     <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -93,7 +95,7 @@
                                 <a class="nav-link custom-link" href="{% url 'shop'%}">Products<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link custom-link" href="#">Product Catalogue</a>
+                                <a class="nav-link custom-link" href="{% url 'error-404' %}">Product Catalogue</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link custom-link" href="{% url 'contact' %}">Contact Us</a>
@@ -110,18 +112,18 @@
                         <div class="container intro-content text-center">
                             <h3 class="intro-subtitle text-white">We get it Done</h3>
                             <h1 class="intro-title text-white">Zelco Industry Paints</h1>
-                            <a href="category.html" class="btn btn-outline-white-4"><span>Discover More</span></a>
+                            <a href="{% url 'shop'%}" class="btn btn-outline-white-4"><span>Discover More</span></a>
                         </div>
                     </div>
                     <div class="intro-slide" style="background-image: url({% static 'assets/images/zelco/home.jpg' %});">
                         <div class="container intro-content text-center">
                             <h3 class="intro-subtitle text-white">We get it Done</h3>
                             <h1 class="intro-title text-white">Zelco Industry Paints</h1>
-                            <a href="category.html" class="btn btn-outline-white-4"><span>Discover More</span></a>
+                            <a href="{% url 'shop'%}" class="btn btn-outline-white-4"><span>Discover More</span></a>
                         </div>
                     </div>
                 </div>
-                <span class="slider-loader"></span>
+
             </div>
 
         </header><!-- End .header -->
@@ -135,8 +137,10 @@
 
             <div class="mb-6"></div><!-- End .mb-6 -->
 
+
             <div class="container">
                 <div class="heading heading-center mb-3">
+
                     <h2 class="title">Top Selling Products</h2><!-- End .title -->
 
                     <ul class="nav nav-pills nav-border-anim justify-content-center" role="tablist">
@@ -179,13 +183,13 @@
                                             <div class="product-cat">
                                                 <a href="{% url 'shop'%}">{{product.category.name}}</a>
                                             </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">{{product.name}}</a></h3><!-- End .product-title -->
+                                            <h3 class="product-title"><a href="{% url 'shop'%}">{{product.name}}</a></h3><!-- End .product-title -->
                                             <div class="product-price">
                                                 Ksh. {{product.price}}
                                             </div><!-- End .product-price -->
                                         </div><!-- End .product-body -->
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
+                                            <a href="{% url 'shop'%}" class="btn-product btn-cart"><span>View More</span></a>
                                         </div><!-- End .product-action -->
                                     </div><!-- End .product -->
 
@@ -197,295 +201,10 @@
                         </div><!-- End .products -->
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="top-fur-tab" role="tabpanel" aria-labelledby="top-fur-link">
-                        <div class="products">
-                            <div class="row justify-content-center">
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-circle label-sale">Sale</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-9-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-9-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
 
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Furniture</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Garden Armchair</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                <span class="new-price">$94,00</span>
-                                                <span class="old-price">Was $94,00</span>
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <span class="product-label label-circle label-new">New</span>
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-12-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-12-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Furniture</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">2-Seater</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $3.107,00
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-13-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-13-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Furniture</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Wingback Chair</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $2.486,00
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-                            </div><!-- End .row -->
-                        </div><!-- End .products -->
                     </div><!-- .End .tab-pane -->
-                    <div class="tab-pane p-0 fade" id="top-decor-tab" role="tabpanel" aria-labelledby="top-decor-link">
-                        <div class="products">
-                            <div class="row justify-content-center">
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-8-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-8-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
 
 
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-11-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-11-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-14-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-14-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Decor</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Cushion Set 3 Pieces</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $199,00
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    {% for product in products %}
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-15-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-15-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Decor</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Cushion Set 3 Pieces</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $199,00
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                    {% endfor %}
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-                            </div><!-- End .row -->
-                        </div><!-- End .products -->
-                    </div><!-- .End .tab-pane -->
-                    <div class="tab-pane p-0 fade" id="top-light-tab" role="tabpanel" aria-labelledby="top-light-link">
-                        <div class="products">
-                            <div class="row justify-content-center">
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-7-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-7-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Lighting</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Petite Table Lamp</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $401,00
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-10-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-10-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Lighting</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Carronade Large Suspension Lamp</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $401,00
-                                            </div><!-- End .product-price -->
-
-                                            <div class="product-nav product-nav-dots">
-                                                <a href="#" class="active" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
-                                                <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                            </div><!-- End .product-nav -->
-
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
-                                    <div class="product product-11 text-center">
-                                        <figure class="product-media">
-                                            <a href="product.html">
-                                                <img src="assets/images/demos/demo-2/products/product-16-1.jpg" alt="Product image" class="product-image">
-                                                <img src="assets/images/demos/demo-2/products/product-16-2.jpg" alt="Product image" class="product-image-hover">
-                                            </a>
-
-                                            <div class="product-action-vertical">
-                                                <a href="#" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
-                                            </div><!-- End .product-action-vertical -->
-                                        </figure><!-- End .product-media -->
-
-                                        <div class="product-body">
-                                            <div class="product-cat">
-                                                <a href="#">Lighting</a>
-                                            </div><!-- End .product-cat -->
-                                            <h3 class="product-title"><a href="product.html">Carronade Table Lamp</a></h3><!-- End .product-title -->
-                                            <div class="product-price">
-                                                $499,00
-                                            </div><!-- End .product-price -->
-                                        </div><!-- End .product-body -->
-                                        <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>View More</span></a>
-                                        </div><!-- End .product-action -->
-                                    </div><!-- End .product -->
-                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-                            </div><!-- End .row -->
-                        </div><!-- End .products -->
-                    </div><!-- .End .tab-pane -->
                 </div><!-- End .tab-content -->
             </div><!-- End .container -->
 
@@ -631,162 +350,9 @@
     </div><!-- End .page-wrapper -->
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
-
-    <div class="mobile-menu-container mobile-menu-light">
-        <div class="mobile-menu-wrapper">
-            <span class="mobile-menu-close"><i class="icon-close"></i></span>
-
-            <form action="#" method="get" class="mobile-search">
-                <label for="mobile-search" class="sr-only">Search</label>
-                <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search product ..." required>
-                <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-            </form>
-
-            <ul class="nav nav-pills-mobile nav-border-anim" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab" role="tab" aria-controls="mobile-menu-tab" aria-selected="true">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Categories</a>
-                </li>
-            </ul>
-
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
-                    <nav class="mobile-nav">
-                        <ul class="mobile-menu">
-                            <li class="active">
-                                <a href="index.html">Home</a>
-
-                                <ul>
-                                    <li><a href="index-1.html">01 - furniture store</a></li>
-                                    <li><a href="index-2.html">02 - furniture store</a></li>
 
 
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="category.html">Shop</a>
-                                <ul>
-                                    <li><a href="category-list.html">Shop List</a></li>
-                                    <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                                    <li><a href="category.html">Shop Grid 3 Columns</a></li>
 
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="product.html" class="sf-with-ul">Product</a>
-                                <ul>
-                                    <li><a href="product.html">Default</a></li>
-                                    <li><a href="product-centered.html">Centered</a></li>
-
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="#">Pages</a>
-                                <ul>
-                                    <li>
-                                        <a href="about.html">About</a>
-
-                                        <ul>
-                                            <li><a href="about.html">About 01</a></li>
-                                            <li><a href="about-2.html">About 02</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-
-                                        <ul>
-                                            <li><a href="contact.html">Contact 01</a></li>
-                                            <li><a href="contact-2.html">Contact 02</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="faq.html">FAQs</a></li>
-
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="blog.html">Blog</a>
-
-                                <ul>
-                                    <li><a href="blog.html">Classic</a></li>
-                                    <li><a href="blog-listing.html">Listing</a></li>
-                                    <li>
-                                        <a href="#">Grid</a>
-                                        <ul>
-                                            <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Masonry</a>
-                                        <ul>
-                                            <li><a href="blog-masonry-2cols.html">Masonry 2 columns</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mask</a>
-                                        <ul>
-                                            <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
-                                            <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Single Post</a>
-                                        <ul>
-                                            <li><a href="single.html">Default with sidebar</a></li>
-                                            <li><a href="single-fullwidth.html">Fullwidth no sidebar</a></li>
-                                            <li><a href="single-fullwidth-sidebar.html">Fullwidth with sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="elements-list.html">Elements</a>
-                                <ul>
-                                    <li><a href="elements-products.html">Products</a></li>
-
-
-                                    <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav><!-- End .mobile-nav -->
-                </div><!-- .End .tab-pane -->
-                <div class="tab-pane fade" id="mobile-cats-tab" role="tabpanel" aria-labelledby="mobile-cats-link">
-                    <nav class="mobile-cats-nav">
-                        <ul class="mobile-cats-menu">
-                            <li><a class="mobile-cats-lead" href="#">Daily offers</a></li>
-                            <li><a class="mobile-cats-lead" href="#">Gift Ideas</a></li>
-                            <li><a href="#">Beds</a></li>
-                            <li><a href="#">Lighting</a></li>
-                            <li><a href="#">Sofas & Sleeper sofas</a></li>
-                            <li><a href="#">Storage</a></li>
-                            <li><a href="#">Armchairs & Chaises</a></li>
-                            <li><a href="#">Decoration </a></li>
-                            <li><a href="#">Kitchen Cabinets</a></li>
-                            <li><a href="#">Coffee & Tables</a></li>
-                            <li><a href="#">Outdoor Furniture </a></li>
-                        </ul><!-- End .mobile-cats-menu -->
-                    </nav><!-- End .mobile-cats-nav -->
-                </div><!-- .End .tab-pane -->
-            </div><!-- End .tab-content -->
-
-            <div class="social-icons">
-                <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
-                <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
-                <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
-                <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
-            </div><!-- End .social-icons -->
-        </div><!-- End .mobile-menu-wrapper -->
-    </div><!-- End .mobile-menu-container -->
-
-    <!-- Sign in / Register Modal -->
     <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
