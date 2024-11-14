@@ -1,6 +1,6 @@
 /* Full-width, sticky navbar with custom styling */
 .custom-navbar {
-    background-color: #acd0ec;
+    background-color: #140af1;
     color: #FF5733 ;
     padding: 1rem 2rem;
     position: sticky;
@@ -13,9 +13,12 @@
 .custom-brand {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #36ff33  !important;
+    color: #f8f9fa  !important;
     text-transform: uppercase;
     margin-right: 1rem;
+}
+.header-middle {
+    color: #36ff33 !important;
 }
 
 /* Toggler button for mobile view */
@@ -119,6 +122,7 @@
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+    opacity: 0.5 !important;
     height: 500px !important;
     display: flex !important;
     align-items: center !important;
