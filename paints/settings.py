@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
 
     "zelco_industry.onrender.com",
     "paints-industry.onrender.com",
+    "zelco-industy.onrender.com"
     ]
 
 CSRF_TRUSTED_ORIGINS = [
