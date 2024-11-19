@@ -203,8 +203,8 @@
     transform: translate(-50%, -50%); /* Adjust position for perfect centering */
     z-index: 3; /* Ensure it appears above images */
     text-align: center;
-    color: #fff; /* Text color */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #0a1bf1; /* Text color */
+    background: rgba(61, 50, 192, 0.8); /* Semi-transparent background */
     padding: 20px;
     border-radius: 10px;
     opacity: 0; /* Hidden by default */
