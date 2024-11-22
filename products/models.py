@@ -41,3 +41,11 @@ class Capacity(models.Model):
 
     def get_absolute_url(self):
         return f"/capacity/{self.slug}/"
+
+
+
+class BusinessContact(models.Model):
+    name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=15)
+    default_message = models.TextField(default="Hello, I'd Like to Enquire about The Zelco Products")
+    

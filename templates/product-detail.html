@@ -108,7 +108,13 @@
                                                 <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
                                             </div><!-- End .product-details-quantity -->
 
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                            <a
+                                                href="https://wa.me/{{ contact.phone_number|urlencode }}?text={{ contact.default_message|urlencode }}"
+                                                class="btn-product btn-cart"
+                                                >
+                                                target="_blank"
+                                                <span>Order Via WhatsApp</span>
+                                            </a>
                                         </div><!-- End .details-action-col -->
 
 

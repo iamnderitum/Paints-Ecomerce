@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product, Category
+from .models import Product, Category, BusinessContact
 # Create your views here.
 
 def index(request):
+    contact =  BusinessContact.objects.first()
     products = Product.objects.all()
     context = {
-        "products":products
+        "products":products,
+        "contact": contact
     }
     return render(request, "index-1.html", context)
 
