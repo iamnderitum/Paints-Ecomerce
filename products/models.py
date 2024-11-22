@@ -25,6 +25,10 @@ class Product(models.Model):
     description = models.TextField(null=True)
     image = models.ImageField(upload_to="products/", null=True, blank=True)
 
+    catch_phrase = models.CharField(max_length=100, blank=True, null=True)
+    key_features = models.TextField(null=True, blank=True)
+    why_choose = models.TextField(null=True, blank=True)
+
     def __str__(self):
         return self.name
 
@@ -48,4 +52,3 @@ class BusinessContact(models.Model):
     name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=15)
     default_message = models.TextField(default="Hello, I'd Like to Enquire about The Zelco Products")
-    

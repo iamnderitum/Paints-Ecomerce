@@ -215,3 +215,10 @@
 .products .product:hover .product-info-overlay {
     opacity: 1;
 }
+
+/* Product Detail Customizations */
+.catch-phrase {
+    font-weight: bold;
+    font-style: italic;
+    color: #6267a7;
+}
