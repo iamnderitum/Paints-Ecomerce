@@ -8,5 +8,5 @@ urlpatterns = [
     path("product/<slug:slug>/", views.product_detail, name="product_detail"),
     path("error_404", views.error_404, name="error-404"),
     path("contact", views.contact, name="contact"),
-    path("about", views.aboutus , name="about-us"),
+    path("about", views.aboutus , name="about"),
 ]
