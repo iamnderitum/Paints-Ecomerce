@@ -22,3 +22,14 @@ $(document).ready(function(){
         }
     });
 });
+
+// Adding Touch Support for Mobile
+
+document.querySelectorAll('.product').forEach(product => {
+    product.addEventListener('touchstart', () => {
+        product.classList.add('hover');
+    });
+    product.addEventListener('touchend', () => {
+        product.classList.remove('hover');
+    });
+});

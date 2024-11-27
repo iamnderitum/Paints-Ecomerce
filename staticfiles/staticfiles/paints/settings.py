@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
 
     "zelco_industry.onrender.com",
     "paints-industry.onrender.com",
+    "zelco-industy.onrender.com"
     ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -51,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     "products",
+    "ckeditor",
+    #"ckeditor_uploader",
 ]
 
 MIDDLEWARE = [
@@ -63,6 +66,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+WHITENOISE_MANIFEST_STRICT = False
 
 ROOT_URLCONF = 'paints.urls'
 
@@ -86,31 +91,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'paints.wsgi.application'
 
-# DATABASES = {
-#     'default': dj_database_url.config(default="postgresql://paint:4t5IUWLuiszDIeiOSqcf9vAmzGRYmWEF@dpg-csmksd5umphs73ak16u0-a/paints_kni0")
-# }
+
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.paints',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
+#     'default': dj_database_url.config(default="postgresql://zelco_industry_database_user:dQK3pV4S0KN2U5HR8Yr9DaSxx2e0Jcgj@dpg-csuc751opnds739vpn10-a/zelco_industry_database")
 # }
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         # Replace this value with your local database's connection string.
-#         default='postgresql://postgres:postgres@localhost:5432/paints',
-#         conn_max_age=600
-#     )
-# }
-
-# Render PostgreSQL configuration for production
-# if not DEBUG:
-#     DATABASES["default"] = dj_database_url.config(default="postgresql://paint:4t5IUWLuiszDIeiOSqcf9vAmzGRYmWEF@dpg-csmksd5umphs73ak16u0-a/paints_kni0")
-
 
 DATABASES = {
     'default': {
@@ -176,4 +164,29 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
+
+## CKEDITOR SETTINGS
+CKEDITOR_BASEPATH = "/my_static/ckeditor/ckeditor/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # Options: 'full', 'basic', or customize your own
+        'height': 300,
+        'width': 'auto',
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList'],
+            ['Link', 'Unlink'],
+            ['Image', 'Table', 'HorizontalRule'],
+            ['Source'],
+        ],
+        'height': 300,
+        'width': '100%',
+    },
+}

@@ -64,7 +64,7 @@
                             <div class="col-md-6">
                                 <div class="product-details product-details-centered">
                                     <h1 class="product-title">{{product.name}}</h1>
-                                    <h5 class="catch-phrase">{{product.catch_phrase}}</h2>
+                                    <h5 class="catch-phrase">{{product.catch_phrase | safe}}</h2>
 
                                     <!-- <div class="ratings-container">
                                         <div class="ratings">
@@ -78,7 +78,7 @@
                                     </div><!-- End .product-price -->
 
                                     <div class="product-content">
-                                        <p>{{product.description}}</p>
+                                        <p>{{product.description | safe}}</p>
 
                                         <!-- <p>{{product.why_choose}}</p> -->
                                     </div><!-- End .product-content -->
@@ -114,7 +114,7 @@
                             <div class="tab-pane fade show active" id="product-desc-tab" role="tabpanel" aria-labelledby="product-desc-link">
                                 <div class="product-desc-content">
 
-                                    <p> {{product.key_features}} </p>
+                                    <p> {{product.key_features | safe}} </p>
 
                                 </div><!-- End .product-desc-content -->
                             </div><!-- .End .tab-pane -->
@@ -122,7 +122,7 @@
                             <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">
                                 <div class="product-desc-content">
                                     <h3>Information</h3>
-                                    <p>{{product.why_choose}} </p>
+                                    <p>{{product.why_choose | safe}} </p>
 
                                 </div><!-- End .product-desc-content -->
                             </div><!-- .End .tab-pane -->

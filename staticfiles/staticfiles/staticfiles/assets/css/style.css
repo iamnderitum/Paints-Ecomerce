@@ -7454,7 +7454,7 @@ p {
   padding: 0.5rem 3.5rem;
   border: 0.2rem solid #fcb941;
   border-radius: 0.5rem;
-  color: #fcb941;
+  color: #140af1;
 }
 .product.product-10 .btn-cart span {
   text-transform: uppercase;
@@ -9741,7 +9741,7 @@ button:focus {
 }
 .quickView-content .btn-product.btn-cart:hover span,
 .quickView-content .btn-product.btn-cart:focus span {
-  color: #fff;
+  color: #FF5733;
   box-shadow: none;
 }
 .quickView-content .btn-product.btn-cart span {
@@ -10796,8 +10796,8 @@ button:focus {
 .product-details-action .btn-cart {
   padding: 1rem 1.5rem;
   max-width: 198px;
-  color: #c96;
-  border: 0.1rem solid #c96;
+  color: #140af1;
+  border: 0.1rem solid #140af1;
 }
 .product-details-action .btn-cart span {
   font-size: 1.4rem;
@@ -10811,9 +10811,9 @@ button:focus {
 }
 .product-details-action .btn-cart:hover,
 .product-details-action .btn-cart:focus {
-  color: #fff;
-  border-color: #c96;
-  background-color: #c96;
+  color: #ecb0ac;
+  border-color: #fff;
+  background-color: #140af1;
 }
 .details-action-wrapper {
   display: flex;

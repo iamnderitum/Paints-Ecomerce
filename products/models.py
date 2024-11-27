@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Category(models.Model):
@@ -22,12 +22,12 @@ class Product(models.Model):
         null=True
     )
     price = models.CharField(max_length=50, null=True)
-    description = models.TextField(null=True)
+    description = RichTextField(default="Default catch phrase text")
     image = models.ImageField(upload_to="products/", null=True, blank=True)
 
-    catch_phrase = models.CharField(max_length=100, blank=True, null=True)
-    key_features = models.TextField(null=True, blank=True)
-    why_choose = models.TextField(null=True, blank=True)
+    catch_phrase = RichTextField(default="Default catch phrase text")
+    key_features = RichTextField(default="Default catch phrase text")
+    why_choose =RichTextField(default="Default why choose text")
 
     def __str__(self):
         return self.name

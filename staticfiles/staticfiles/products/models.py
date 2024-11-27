@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Category(models.Model):
@@ -25,6 +25,10 @@ class Product(models.Model):
     description = models.TextField(null=True)
     image = models.ImageField(upload_to="products/", null=True, blank=True)
 
+    catch_phrase = RichTextField(default="Default catch phrase text")
+    key_features = models.TextField(null=True, blank=True)
+    why_choose = models.TextField(null=True, blank=True)
+
     def __str__(self):
         return self.name
 
@@ -41,3 +45,10 @@ class Capacity(models.Model):
 
     def get_absolute_url(self):
         return f"/capacity/{self.slug}/"
+
+
+
+class BusinessContact(models.Model):
+    name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=15)
+    default_message = models.TextField(default="Hello, I'd Like to Enquire about The Zelco Products")

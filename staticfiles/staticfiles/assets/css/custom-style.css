@@ -1,6 +1,6 @@
 /* Full-width, sticky navbar with custom styling */
 .custom-navbar {
-    background-color: #acd0ec;
+    background-color: #140af1;
     color: #FF5733 ;
     padding: 1rem 2rem;
     position: sticky;
@@ -13,9 +13,12 @@
 .custom-brand {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #36ff33  !important;
+    color: #f8f9fa  !important;
     text-transform: uppercase;
     margin-right: 1rem;
+}
+.header-middle {
+    color: #36ff33 !important;
 }
 
 /* Toggler button for mobile view */
@@ -119,6 +122,7 @@
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+
     height: 500px !important;
     display: flex !important;
     align-items: center !important;
@@ -137,7 +141,7 @@
     background-size: inherit;
     background-position: inherit;
     background-color: rgba(0, 0, 0, 0.4); /* Optional color overlay */
-    opacity: 0.6;                     /* Background image opacity */
+                      /* Background image opacity */
     z-index: 1;
 }
 
@@ -150,4 +154,71 @@
 .intro-content h1 {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+}
+
+/* CSS HOVER EFFECT FOR PRODUCTS */
+
+/* General styling for the product container */
+.products .product {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover image effect */
+.products .product .product-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+/* Show hover image */
+.products .product:hover .product-image-hover {
+    opacity: 1;
+}
+
+/* Dim the original image on hover */
+.products .product:hover .product-image {
+    opacity: 0.5;
+    filter: blur(2px);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+/* Zoom effect */
+.products .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Product info overlay container */
+.products .product .product-info-overlay {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for perfect centering */
+    z-index: 3; /* Ensure it appears above images */
+    text-align: center;
+    color: #0a1bf1; /* Text color */
+    background: rgba(61, 50, 192, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease;
+}
+
+/* Show product info on hover */
+.products .product:hover .product-info-overlay {
+    opacity: 1;
+}
+
+/* Product Detail Customizations */
+.catch-phrase {
+    font-weight: bold;
+    font-style: italic;
+    color: #6267a7;
 }

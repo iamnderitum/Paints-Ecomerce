@@ -24,7 +24,8 @@ admin.site.site_header = "Zelco Industry Administration"
 admin.site.index_title = "Admin@Zelco"
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("products.urls"))
+    path("", include("products.urls")),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:
