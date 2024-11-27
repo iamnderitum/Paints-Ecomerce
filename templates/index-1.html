@@ -187,7 +187,13 @@
 
                                             <div class="product-action action-icon-top">
 
-                                                <a href="{% url 'product_detail' slug=product.slug %}" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                                <a
+                                                    href="https://wa.me/{{ contact.phone_number|urlencode }}?text={{ contact.default_message|urlencode }}"
+                                                    class="btn-product btn-whatsapp"
+                                                    title="Quick view">
+                                                    <span>Order Via Whatsapp</span>
+                                                    <span>+254 701350585</span>
+                                                </a>
 
                                             </div><!-- End .product-action -->
                                         </figure><!-- End .product-media -->
@@ -200,12 +206,7 @@
                                             <div class="product-price">
                                                 Ksh. {{product.price}}
                                             </div><!-- End .product-price -->
-                                            <div class="ratings-container">
-                                                <div class="ratings">
-                                                    <div class="ratings-val" style="width: 20%;"></div><!-- End .ratings-val -->
-                                                </div><!-- End .ratings -->
-                                                <span class="ratings-text">( 2 Reviews )</span>
-                                            </div><!-- End .rating-container -->
+                                           
 
                                             <div class="product-nav product-nav-dots">
                                                 <a href="#" class="active" style="background: #cc9966;"><span class="sr-only">Color name</span></a>
