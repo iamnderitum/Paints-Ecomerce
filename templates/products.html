@@ -36,58 +36,41 @@
 
 
 
-                    <div class="products">
-                        <div class="row">
-                            {% for product in products %}
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="product product-11 text-center">
-                                    <figure class="product-media">
-                                        <span class="product-label label-top">Top</span>
-                                        <a href="{% url 'product_detail' slug=product.slug %}">
-                                            <img src="{{product.image.url}}" alt="Product image" class="product-image">
-                                        </a>
+                    <h2 class="title text-center mb-4">Our Products</h2><!-- End .title text-center mb-2 -->
 
-                                        <div class="product-action-vertical">
-                                            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                        </div><!-- End .product-action -->
 
-                                    </figure><!-- End .product-media -->
+                    <div class="row">
+                        {% for product in products%}
+                        <div class="col-md-4">
+                            <div class="member member-anim text-center">
+                                <figure class="member-media">
+                                    <img src="{{product.image.url}}" alt="member photo">
 
-                                     <!-- Product Info Overlay -->
-                                     <div class="product-info-overlay">
-                                        <h3 class="product-title">{{ product.name }}</h3>
-                                        <p class="product-category">{{ product.category.name }}</p>
-                                        <p class="product-price">Ksh. {{ product.price }}</p>
-                                    </div>
+                                    <figcaption class="member-overlay">
+                                        <div class="member-overlay-content">
+                                            <h3 class="member-title">{{product.name}}<span>{{product.category.name}}</span></h3><!-- End .member-title -->
+                                            <p>{{product.catch_phrase | safe}}</p>
+                                            <div class="product-details-action">
+                                                <a
+                                                    href="https://wa.me/{{ contact.phone_number|urlencode }}?text={{ contact.default_message|urlencode }}"
+                                                    class="btn-product btn-cart">
+                                                    <span>+254 701350585</span>
+                                                </a>
+                                            </div>
+                                        </div><!-- End .member-overlay-content -->
+                                    </figcaption><!-- End .member-overlay -->
+                                </figure><!-- End .member-media -->
+                                <div class="member-content">
+                                    <h3 class="member-title">{{product.name}}<span>Ksh. {{product.price}}</span></h3><!-- End .member-title -->
 
-                                    <div class="product-body">
-                                        <div class="product-cat">
-                                            <a href="#">{{product.category.name}}</a>
-                                        </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="{% url 'product_detail' slug=product.slug %}">{{product.name}}</a></h3><!-- End .product-title -->
-                                        <div class="product-price">
-                                            Ksh. {{product.price}}
-                                        </div><!-- End .product-price -->
-                                        <div class="ratings-container">
-                                            <div class="ratings">
-                                                <div class="ratings-val" style="width: 20%;"></div><!-- End .ratings-val -->
-                                            </div><!-- End .ratings -->
-                                            <span class="ratings-text">( 2 Reviews )</span>
-                                        </div><!-- End .rating-container -->
+                                </div><!-- End .member-content -->
 
-                                        <div class="product-nav product-nav-dots">
-                                            <a href="#" class="active" style="background: #140af1;"><span class="sr-only">Color name</span></a>
-                                            <a href="#" style="background: #f1dc0a;"><span class="sr-only">Color name</span></a>
-                                            
-                                        </div><!-- End .product-nav -->
-                                    </div><!-- End .product-body -->
-                                </div><!-- End .product -->
-                            </div><!-- End .col-sm-6 col-lg-4 col-xl-3 -->
+                            </div><!-- End .member -->
+                        </div><!-- End .col-md-4 -->
+                        {% endfor %}
 
-                            {% endfor %}
-                        </div><!-- End .row -->
+                    </div><!-- End .row -->
 
-                    </div><!-- End .products -->
 
                     <div class="sidebar-filter-overlay"></div><!-- End .sidebar-filter-overlay -->
                     <aside class="sidebar-shop sidebar-filter">
