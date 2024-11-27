@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <main class="main">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'index'%}">Home</a></li>
+
+                        <li class="breadcrumb-item active" aria-current="page">About us</li>
+                    </ol>
+                </div><!-- End .container -->
+            </nav><!-- End .breadcrumb-nav -->
+            <div class="container">
+	        	<div class="page-header page-header-big text-center" style="background-image: url({% static 'assets/images/zelco/zelco_slider_1.png' %});">
+        			<h1 class="page-title text-white">About us<span class="text-white">Who we are</span></h1>
+	        	</div><!-- End .page-header -->
+            </div><!-- End .container -->
+
+            <div class="page-content pb-0">
+                <div class="container">
+                    <h2 class="title text-center mb-3">Zelco Industries <span class="title-separator">:</span> </h2><!-- End .title text-center -->
+                    <p class="testimonial testimonial-icon text-center">Mastering the Art of Surface Perfection with Exceptional Leadership</p>
+                	<div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl"
+                        data-owl-options='{
+                            "nav": false,
+                            "dots": true,
+                            "margin": 20,
+                            "loop": true,
+                            "responsive": {
+                                "1200": {
+                                    "nav": true
+                                }
+                            }
+                        }'>
+                		<blockquote class="testimonial testimonial-icon text-center">
+	                		<p>“ Welcome to Zelco Industries, where innovation meets excellence in the world of surface preparation.
+                                Specializing in the manufacturing of premium paint undercoats and skimming coat fillers, we're your trusted partner for
+                                 transforming ordinary spaces into extraordinary masterpieces.
+                                . ”
+                            </p>
+
+	                		<cite>
+	                			Job Mugo
+	                			<span>Admin</span>
+	                		</cite>
+	                	</blockquote><!-- End .testimonial -->
+
+
+
+
+                	</div><!-- End .testimonials-slider owl-carousel -->
+
+                    <div class="row">
+                        <div class="col-lg-6 mb-3 mb-lg-0">
+                            <h2 class="title">Our Promise: </h2><!-- End .title -->
+                            <p class="testimonial testimonial-icon text-center">Unmatched Quality and Performance</p>
+                           
+                            <p>  At Zelco Industries, we're committed to delivering products that exceed your expectations.
+                                 Our state-of-the-art manufacturing processes and rigorous quality control ensure that every can of
+                                 Zelco Wall Undercoat and every bag of Zelco Skim Coat Filler is crafted to the highest standards.
+                            </p>
+                        </div><!-- End .col-lg-6 -->
+
+                        <div class="col-lg-6">
+                            <h2 class="title">From Concept to Completion</h2><!-- End .title -->
+                            <p class="testimonial testimonial-icon text-center">Your Surface Preparation Solution</p>
+
+                            <p>Whether you're a seasoned contractor or a passionate DIYer, Zelco Industries has the products
+                                and expertise to support your every project need. Our comprehensive range of undercoats and fillers is
+                                engineered to tackle any challenge, from smoothing out rough walls to ensuring perfect adhesion for your final paint job. </p>
+                        </div><!-- End .col-lg-6 -->
+                    </div><!-- End .row -->
+
+                    <div class="mb-5"></div><!-- End .mb-4 -->
+                </div><!-- End .container -->
+
+                <div class="bg-light-2 pt-6 pb-5 mb-6 mb-lg-8">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 mb-3 mb-lg-0">
+                                <h2 class="title">Why Choose Zelzo</h2><!-- End .title -->
+                                <p class="lead text-primary mb-3">Superior Adhesion & Coverage <br>Enhanced Finish Quality <br>Time-Saving Formulas<br>Eco-Conscious Solutions<br></p><!-- End .lead text-primary -->
+                                <p class="mb-2">Our undercoats and fillers form a robust, seamless base that guarantees your topcoats adhere perfectly and cover flawlessly. </p>
+                                <p class="mb-2">Designed for efficiency, our products dry quickly, allowing you to accelerate your project timeline without compromising on quality.</p>
+                                <!-- <a href="blog.html" class="btn btn-sm btn-minwidth btn-outline-primary-2">
+                                    <span>VIEW OUR NEWS</span>
+                                    <i class="icon-long-arrow-right"></i>
+                                </a> -->
+                            </div><!-- End .col-lg-5 -->
+
+                            <div class="col-lg-6 offset-lg-1">
+                                <div class="about-images">
+                                    <img src="{% static 'assets/images/zelco/home_page.jpg' %}" alt="" class="about-img-front">
+                                    <img src="{% static 'assets/images/zelco/zelco_slider_1.jpg' %}" alt="" class="about-img-back">
+                                </div><!-- End .about-images -->
+                            </div><!-- End .col-lg-6 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+                </div><!-- End .bg-light-2 pt-6 pb-6 -->
+
+                <div class="container">
+
+
+                    <hr class="mt-4 mb-6">
+
+                    <h2 class="title text-center mb-4">Meet Our Team</h2><!-- End .title text-center mb-2 -->
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="member member-anim text-center">
+                                <figure class="member-media">
+                                    <img src="assets/images/team/member-1.jpg" alt="member photo">
+
+                                    <figcaption class="member-overlay">
+                                        <div class="member-overlay-content">
+                                            <h3 class="member-title">Samanta Grey<span>Founder & CEO</span></h3><!-- End .member-title -->
+                                            <p>Sed pretium, ligula sollicitudin viverra, tortor libero sodales leo, eget blandit nunc.</p>
+                                            <div class="social-icons social-icons-simple">
+                                                <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                                                <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                                                <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                                            </div><!-- End .soial-icons -->
+                                        </div><!-- End .member-overlay-content -->
+                                    </figcaption><!-- End .member-overlay -->
+                                </figure><!-- End .member-media -->
+                                <div class="member-content">
+                                    <h3 class="member-title">Samanta Grey<span>Founder & CEO</span></h3><!-- End .member-title -->
+                                </div><!-- End .member-content -->
+                            </div><!-- End .member -->
+                        </div><!-- End .col-md-4 -->
+
+
+
+
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+
+                <div class="mb-2"></div><!-- End .mb-2 -->
+
+                <div class="about-testimonials bg-light-2 pt-6 pb-6">
+                    <div class="container">
+                        <h2 class="title text-center mb-3">Join the Zelco Revolution</h2><!-- End .title text-center -->
+
+                        <div class="owl-carousel owl-simple owl-testimonials-photo" data-toggle="owl"
+                            data-owl-options='{
+                                "nav": false,
+                                "dots": true,
+                                "margin": 20,
+                                "loop": false,
+                                "responsive": {
+                                    "1200": {
+                                        "nav": true
+                                    }
+                                }
+                            }'>
+                            <blockquote class="testimonial text-center">
+                                <img src="assets/images/testimonials/user-1.jpg" alt="user">
+                                <p>“ Embrace the power of perfection with Zelco Industries. Choose products that are as dedicated to quality as you are to your craft. Visit us today to explore our full range and start your journey to surface perfection.
+
+                                    **Zelco Industries – Build right, shine bright ”</p>
+                                <cite>
+                                    Zelco Industries - Designer
+                                    <span></span>
+                                </cite>
+                            </blockquote><!-- End .testimonial -->
+
+                            >
+                        </div><!-- End .testimonials-slider owl-carousel -->
+                    </div><!-- End .container -->
+                </div><!-- End .bg-light-2 pt-5 pb-6 -->
+            </div><!-- End .page-content -->
+        </main><!-- End .main -->
+
+{% endblock %}

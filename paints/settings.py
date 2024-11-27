@@ -167,8 +167,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 ## CKEDITOR SETTINGS
+
 #CKEDITOR_BASEPATH = "/my_static/ckeditor/ckeditor/"
-CKEDITOR_UPLOAD_PATH = "uploads/" 
+CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',  # Options: 'full', 'basic', or customize your own

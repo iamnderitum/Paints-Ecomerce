@@ -91,9 +91,12 @@
                                     </div><!-- End .details-filter-row -->
 
                                     <div class="product-details-action">
-                                        <a href="#" class="btn-product btn-cart"><span>WhatsApp Order</span></a>
-
-
+                                        <a
+                                            href="https://wa.me/{{ contact.phone_number|urlencode }}?text={{ contact.default_message|urlencode }}"
+                                            class="btn-product btn-cart">
+                                            <span>WhatsApp Order</span>
+                                        </a>
+                                    </div>
 
                                 </div><!-- End .product-details -->
                             </div><!-- End .col-md-6 -->
