@@ -44,17 +44,10 @@
             <div class="header-top">
                 <div class="container">
                     <div class="header-left">
-                        <div class="header">
 
-                            <a
-                                href="https://wa.me/{{ contact.phone_number|urlencode }}?text={{ contact.default_message|urlencode }}"
-                                class="social-icon social-youtube"
-                                title="WhatsApp"
-                                target="_blank">
-                                <i class="icon-whatsapp" style="font-size: 48px;"></i>
-                             </a>
-
-                        </div>
+                            <a href="{% url 'index' %}">
+                                <img src="{% static 'assets/images/zelco/zelco logo.jpeg' %}" alt="Zelco Logo" class="logo" width="120" height="30">
+                            </a>
 
                         <!-- <div class="header-dropdown">
                             <a href="{% url 'error-404' %}"><i class="fa fa-envelope-o" style="font-size:12px">  graphmaster@zelco.com</i></a>
@@ -62,17 +55,23 @@
                         </div> -->
                     </div>
 
-                    <div class="header-right">
-                        <ul class="top-menu">
-                            <li>
-                                <a href="#">Links</a>
-                                <ul>
+                    <div class="header-right navbar-nav">
+                        <ul class="top-menu-right">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tel:+254701350585">
+                                    <i class="icon-phone"></i> +254701350585
+                                </a>
 
-                                    <li><a href="{% url 'error-404' %}"><i class="icon-facebook" style="font-size:24px"></i> </a></li>
-
-
-                                    <li><a href="{% url 'error-404' %}" data-toggle="modal"><i class="icon-instagram" style="font-size:24px"></i></a></li>
-                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">
+                                    <i class="icon-envelope"></i> Contact Us
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://facebook.com/yourpage" target="_blank">
+                                    <i class="icon-facebook"></i> Facebook
+                                </a>
                             </li>
                         </ul>
                     </div>
