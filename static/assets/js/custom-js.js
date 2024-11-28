@@ -33,3 +33,7 @@ document.querySelectorAll('.product').forEach(product => {
         product.classList.remove('hover');
     });
 });
+
+document.querySelector('.mobile-menu-toggle').addEventListener('click', function () {
+    document.querySelector('.top-menu-right').classList.toggle('active');
+});

@@ -222,3 +222,102 @@
     font-style: italic;
     color: #6267a7;
 }
+
+
+ /* TOP HEADER STYLING */
+/* General styles */
+/* General Styles */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #20200c; /* Light background color */
+    border-bottom: 1px solid #ddd; /* Subtle border */
+}
+
+.header-left img.logo {
+    max-height: 60px;
+}
+
+.header-right {
+    display: flex;
+}
+
+.top-menu-right {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add spacing between items */
+}
+
+.nav-item {
+    font-size: 14px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Highlight on hover */
+}
+
+.nav-link i {
+    font-size: 16px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .header-right {
+        width: 100%;
+    }
+
+    .top-menu-right {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #ddd; /* Add separator for items */
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        justify-content: flex-start;
+        padding: 0 15px;
+        font-size: 16px;
+    }
+
+    .nav-link i {
+        font-size: 18px;
+        color: #007bff; /* Icon color for better contrast */
+    }
+}
+
+/* Optional: Add hover effect for desktop */
+@media (min-width: 768px) {
+    .nav-item:hover {
+        background-color: #f0f0f0; /* Light background on hover */
+    }
+}
