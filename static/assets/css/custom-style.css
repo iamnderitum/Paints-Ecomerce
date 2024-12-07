@@ -227,13 +227,30 @@
  /* TOP HEADER STYLING */
 /* General styles */
 /* General Styles */
+.header-wrapper {
+    position: relative;
+}
 .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
+    padding: 10px 0;
     background-color: #20200c; /* Light background color */
     border-bottom: 1px solid #ddd; /* Subtle border */
+    z-index: 2;
+}
+
+.header-middle {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* Adjust as needed */
+    z-index: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-left a .logo {
+    display: block;
+    margin: 0 auto; /* Centers the logo */
 }
 
 .header-left img.logo {
@@ -242,10 +259,17 @@
 
 .header-right {
     display: flex;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%; /* Ensures it spans the full width */
+
 }
 
 .top-menu-right {
     list-style: none;
+    justify-content: space-around;
+    align-items: center;
     display: flex;
     margin: 0;
     padding: 0;
@@ -272,7 +296,31 @@
 .nav-link i {
     font-size: 16px;
 }
+.top-menu-right .nav-item {
+    padding: 5px 15px;
+    border: 1px solid #ffffff; /* White boundary between items */
+    border-radius: 5px;
+}
 
+.top-menu-right .nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-menu-right .nav-item a:hover {
+    color: #ffc107; /* Optional hover effect */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .top-menu-right {
+        flex-direction: column;
+    }
+
+    .top-menu-right .nav-item {
+        margin-bottom: 5px;
+    }
+}
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .header-top {

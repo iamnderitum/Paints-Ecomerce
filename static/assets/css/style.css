@@ -573,14 +573,14 @@ blockquote.text-white cite span {
   line-height: 1.5;
   letter-spacing: 0;
   color: #777;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 .header-top a {
   color: inherit;
 }
 .header-top a:hover,
 .header-top a:focus {
-  color: #c96;
+  color: #41475d;
 }
 .header-top .container,
 .header-top .container-fluid {
@@ -1463,7 +1463,7 @@ blockquote.text-white cite span {
   }
   .header .container-fluid .megamenu-container .megamenu {
     right: auto;
-    width: 1170px;
+    width: 2170px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -2808,15 +2808,15 @@ p {
 }
 .header-3 {
   color: #fff;
-  background-color: #333333;
+  background-color: #f2f2e4;
 }
 .header-3 .header-top {
-  background-color: #333;
+  background-color: #f2f2e4;
 }
 .header-3 .header-top .container::after,
 .header-3 .header-top .container-fluid::after {
   height: 0.1rem;
-  background-color: #444444;
+  background-color: #41475d;
 }
 .header-3 .header-top .header-left i {
   font-size: 1.6rem;
@@ -3504,7 +3504,7 @@ p {
   font-weight: 400;
   font-size: 1.4rem;
   color: #f4e8dd;
-  background-color: #c96;
+  background-color: #f2f2e4;
   margin-bottom: 0;
 }
 .header-8 .header-top .container:after,
