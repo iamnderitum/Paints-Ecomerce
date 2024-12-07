@@ -96,18 +96,21 @@ WSGI_APPLICATION = 'paints.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#  
-
+#
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'paints',
-        'USER': 'paint',
-        'PASSWORD': '011235813',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(default="postgresql://zelco_industry_database_user:dQK3pV4S0KN2U5HR8Yr9DaSxx2e0Jcgj@dpg-csuc751opnds739vpn10-a/zelco_industry_database")
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'paints',
+#         'USER': 'paint',
+#         'PASSWORD': '011235813',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
